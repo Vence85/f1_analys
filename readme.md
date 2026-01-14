@@ -12,15 +12,6 @@ The goal is to work with **publicly available F1 data** and gradually build:
 
 ---
 
-## 📂 Project Structure
-.
-├── backend/ # Data ingestion, transformation and modeling logic
-├── data/ # Raw and processed data, local databases
-├── frontend/ # Visualization layer (planned, e.g. Streamlit)
-├── .gitignore
-└── README.md
-
-
 ### backend/
 Contains Python code for:
 - fetching data from public F1 APIs (e.g. Ergast)
