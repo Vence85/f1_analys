@@ -1,0 +1,10 @@
+[project]
+name = "f1-analytics-frontend"
+version = "0.1.0"
+dependencies = [
+  "streamlit>=1.30",
+  "requests>=2.31",
+]
+
+[tool.uv]
+dev-dependencies = []

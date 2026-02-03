@@ -1,0 +1,27 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "8000:80"
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./knowledge_base:/app/knowledge_base
+    image: f1-analytics-backend:latest
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    ports:
+      - "8501:8501"
+    depends_on:
+      - backend
+    environment:
+      - API_URL=http://backend
+    env_file:
+      - .env
+    image: f1-analytics-frontend:latest
